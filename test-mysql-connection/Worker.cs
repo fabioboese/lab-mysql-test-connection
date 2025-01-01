@@ -31,7 +31,7 @@ public class Worker : BackgroundService
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"{DateTime.Now.ToString("HH:mm:ss.fff")} An error occurred: {ex.Message}");
+                Console.WriteLine($"{DateTime.Now.ToString("HH:mm:ss.fff")} An error occurred: {ex.Message} (CS: {connectionString})");
             }
 
             await Task.Delay(1000 * interval, stoppingToken);

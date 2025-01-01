@@ -2,9 +2,9 @@
 
 FROM mcr.microsoft.com/dotnet/runtime:8.0 AS base
 USER app
-ENV MYSQLCONNSTR "Server=host.docker.internal;Database=mysqlDB;Uid=root;Pwd=mysqlPW;"
-ENV MYSQLCMD "SELECT COUNT(*) FROM T1"
-ENV INTERVAL 5
+ENV MYSQLCONNSTR="Server=host.docker.internal;Database=db1;Uid=root;Pwd=mysqlPW;"
+ENV MYSQLCMD="SELECT COUNT(*) FROM T1"
+ENV INTERVAL=5
 WORKDIR /app
 
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
